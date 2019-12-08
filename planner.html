@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weekly Planner</title>
     <link rel="stylesheet" href="planner.css" />
+    <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
@@ -17,9 +18,28 @@
 
 <body>
     <div class="container">
-        <div id="home" class="flex-center flex-column">
-            <h2>Current Date</h2>
-            <div id="displayMoment"></div>
+        <div id="home" class="mainColumn flex-center flex-column">
+            <h2 style="text-align:center;">Date & Time</h2>
+            <div style="text-align:center;" id="displayMoment"></div>
+
+
+
+            <hr>
+            <br>
+            <table>
+                <tbody>
+                    <tr id="nineAM">
+                        <td class="timeColumn">9am</td>
+                        <td><input id="nineInput" class="textColumn" type="text"></td>
+                        <td class="buttonColumn"><button id="nineButton">Save</button></td>
+                    </tr>
+                    <tr id="nineAM">
+                        <td class="timeColumn">10am</td>
+                        <td><input id="tenInput" class="textColumn" type="text"></td>
+                        <td class="buttonColumn"><button id="nineButton">Save</button></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
     <script src="planner.js"></script>
