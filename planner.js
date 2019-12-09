@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  //pull and display date and time
+//pull and display date and time
   var NowMoment = moment().format("LLL");
   var eDisplayMoment = document.getElementById("displayMoment");
   eDisplayMoment.innerHTML = NowMoment;
@@ -15,9 +15,6 @@ $(document).ready(function() {
   var threePM = 15;
   var fourPM = 16;
   var fivePM = 17;
-  console.log(currentTime);
-  console.log(nineAM);
-  console.log(elevenAM);
   //if statements for coloring of table
   //9:00
   if (currentTime > nineAM) {
@@ -91,4 +88,10 @@ $(document).ready(function() {
   } else {
     $("#fiveInput").css("background-color", "#F08080");
   }
+// function
+$(".lockBtn").click(function() {
+  var tr = $(this).closest('tr').find('input').attr("id");
+  console.log(tr)
+  localStorage.setItem(tr, $('#' + tr).val());
+});
 });
