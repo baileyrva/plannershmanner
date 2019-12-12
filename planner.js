@@ -1,5 +1,35 @@
 $(document).ready(function() {
-//pull and display date and time
+  //setting inputs and labels with textboxes
+  var labelMapping = [
+    { id: "nineInput", label: "9am" },
+    { id: "tenInput", label: "10am" },
+    { id: "elevenInput", label: "11am" },
+    { id: "twelveInput", label: "12pm" },
+    { id: "oneInput", label: "1pm" },
+    { id: "twoInput", label: "2pm" },
+    { id: "threeInput", label: "3pm" },
+    { id: "fourInput", label: "4pm" },
+    { id: "fiveInput", label: "5pm" }
+  ];
+  //reviews each array id and checks for input from user if no input leaves blank
+  for (var i = 0; i < labelMapping.length; i++) {
+    var currentRecord = localStorage.getItem(labelMapping[i].id);
+    var label = labelMapping[i].label;
+    if (currentRecord == null) {
+      currentRecord = "";
+    }
+    //setting information given by the user after checking localStorage
+    $(".scheduleApp").append(
+      '<tr><td class="timeColumn"> ' +
+        label +
+        '</td><td><input class="textColumn" type="text" id=' +
+        labelMapping[i].id +
+        ' value="' +
+        currentRecord +
+        '"></td><td class="buttonColumn"><button class="lockBtn"><i class="fa fa-lock"></i></button></td></tr>'
+    );
+  }
+  //pull and display date and time
   var NowMoment = moment().format("LLL");
   var eDisplayMoment = document.getElementById("displayMoment");
   eDisplayMoment.innerHTML = NowMoment;
@@ -88,10 +118,12 @@ $(document).ready(function() {
   } else {
     $("#fiveInput").css("background-color", "#F08080");
   }
-// function
-$(".lockBtn").click(function() {
-  var tr = $(this).closest('tr').find('input').attr("id");
-  console.log(tr)
-  localStorage.setItem(tr, $('#' + tr).val());
-});
+  // appending button to table
+  $(".lockBtn").click(function() {
+    var tr = $(this)
+      .closest("tr")
+      .find("input")
+      .attr("id");
+    localStorage.setItem(tr, $("#" + tr).val());
+  });
 });

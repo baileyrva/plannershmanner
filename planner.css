@@ -1,53 +1,53 @@
 .container {
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 80rem;
-    margin: 0 auto;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80rem;
+  margin: 0 auto;
 }
 
 .mainColumn {
-    width: 60vw;
-    text-align: center;
+  width: 60vw;
+  text-align: center;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    color: black;
-    font-family: 'Didact Gothic', 'Arial';
-    background-color: lightgrey;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-family: "Didact Gothic", "Arial";
+  background-color: lightgrey;
 }
 
 table {
-    width: 100%; 
+  width: 100%;
 }
 
 .timeColumn {
-    width: 1%;
-    font-size: 15px;    
+  width: 1%;
+  font-size: 15px;
 }
 
 .fa-lock {
-    width: 5vw; 
-    color: lightseagreen; 
+  width: 5vw;
+  color: lightseagreen;
 }
 
 .textColumn {
-    width: 100%;
-    height: 50px;
-    background-color: rgba(65, 177, 149, 0.534);
-    font-size: 18px;
-    color: black; 
-    font-weight: bold;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(65, 177, 149, 0.534);
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
 }
 
 .buttonColumn {
-    width: 1%;
+  width: 1%;
 }
 
 button {
-    font-size: 15px; 
+  font-size: 15px;
 }
